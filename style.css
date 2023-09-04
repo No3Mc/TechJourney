@@ -36,16 +36,6 @@ header {
     align-items: center;
     animation: fadeIn 1.5s forwards;
 }
-        /* Keyframes for fade-in animation */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
 
 .social-icons a {
     color: #fff;
