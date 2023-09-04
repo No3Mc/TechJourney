@@ -6,13 +6,17 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="header.css">
-
+    <script>
+        function openLinkInSameTab(url) {
+            window.location.href = url;
+        }
+    </script>
 </head>
 <body>
     <header>
         <div class="profile-section">
             <div class="profile-image">
-                <img src="profile.jpeg" alt="Profile Image">
+                <img src="profile.jpeg" alt="Profile Image" onclick="openLinkInSameTab('https://no3mc.com')">
             </div>
             <div class="social-icons">
                 <a href="https://discordapp.com/users/466589530754121739" target="_blank" rel="noopener" aria-label="Discord"><i class="fab fa-discord"></i></a>
