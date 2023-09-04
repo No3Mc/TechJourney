@@ -7,6 +7,7 @@
     <link rel="icon" href="logo.png" type="image/png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="nm.css" id="theme-style">
     <script>
         function openLinkInSameTab(url) {
             window.location.href = url;
@@ -28,9 +29,9 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/works">Works</a></li>
+                <li><a href="/contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -38,5 +39,27 @@
     <footer>
         <p>&copy; 2023 Syed Naqvi. All rights reserved.</p>
     </footer>
+    <button id="theme-toggle" aria-label="Toggle Theme">
+        <i class="fas fa-sun" id="sun-icon" style="display: none;"></i>
+        <i class="fas fa-moon" id="moon-icon"></i>
+    </button>
+    <script>
+        const themeToggle = document.getElementById("theme-toggle");
+        const themeStyle = document.getElementById("theme-style");
+        const sunIcon = document.getElementById("sun-icon");
+        const moonIcon = document.getElementById("moon-icon");
+
+        themeToggle.addEventListener("click", () => {
+            if (themeStyle.getAttribute("href") === "lm.css") {
+                themeStyle.setAttribute("href", "nm.css");
+                sunIcon.style.display = "none";
+                moonIcon.style.display = "inline-block";
+            } else {
+                themeStyle.setAttribute("href", "lm.css");
+                sunIcon.style.display = "inline-block";
+                moonIcon.style.display = "none";
+            }
+        });
+    </script>
 </body>
 </html>
