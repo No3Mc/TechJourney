@@ -4,6 +4,7 @@ body, h1, iframe {
     padding: 0;
 }
 
+
 /* Set background color and font for the body */
 body {
     background-color: #f2f2f2;
@@ -35,6 +36,16 @@ header {
     align-items: center;
     animation: fadeIn 1.5s forwards;
 }
+        /* Keyframes for fade-in animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
 
 .social-icons a {
     color: #fff;
