@@ -27,24 +27,13 @@ header {
     margin-left: 30px;
 }
 
-/* Style for the profile image */
-.profile-image img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    margin-right: 15px;
-    cursor: pointer; 
-    transition: opacity 0.3s; 
-}
 
-.profile-image img:hover {
-    opacity: 0.6;
-}
 
 /* Style for social icons */
 .social-icons {
     display: flex;
     align-items: center;
+    animation: fadeIn 1.5s forwards;
 }
 
 .social-icons a {
@@ -55,13 +44,7 @@ header {
 
 }
 
-.portfolio-text {
-    color: #fff;
-    font-size: 24px;
-    margin-right: 10px;
-    text-decoration: none;
-    transition: color 0.3s;
-}
+
 
 .social-icons a:hover {
     color: #ffc107;
@@ -72,6 +55,7 @@ nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    animation: fadeIn 1.5s forwards;
 }
 
 nav ul li {
@@ -128,6 +112,7 @@ footer {
     cursor: pointer;
     margin-right: 20px;
     transition: color 0.3s;
+    animation: fadeIn 1.5s forwards;
 }
 
 #theme-toggle:hover {
@@ -168,5 +153,5 @@ footer {
 /* Apply the animation on image hover */
 .my-image img:hover {
     opacity: 0.6;
-    animation: imageHover 1s infinite; /* Apply the animation */
+    animation: imageHover 1s infinite; 
 }
