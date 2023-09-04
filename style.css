@@ -33,6 +33,12 @@ header {
     height: 60px;
     border-radius: 50%;
     margin-right: 15px;
+    cursor: pointer; 
+    transition: opacity 0.3s; 
+}
+
+.profile-image img:hover {
+    opacity: 0.6;
 }
 
 /* Style for social icons */
