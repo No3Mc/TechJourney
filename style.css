@@ -82,7 +82,7 @@ nav ul li a:hover {
     color: #ffc107;
 }
 
-/* Style for the footer */
+/* Light mode styles for the footer */
 footer {
     background-color: #333;
     color: #fff;
@@ -92,6 +92,18 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+/* Dark mode styles for the footer */
+.night-mode footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
 
 /* Style for the content heading */
 .content-heading {

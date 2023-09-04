@@ -14,7 +14,7 @@
         }
     </script>
 </head>
-<body>
+<body class="night-mode">
     <header>
         <div class="profile-section">
             <div class="profile-image">
@@ -48,18 +48,21 @@
         const themeStyle = document.getElementById("theme-style");
         const sunIcon = document.getElementById("sun-icon");
         const moonIcon = document.getElementById("moon-icon");
-
+    
         themeToggle.addEventListener("click", () => {
             if (themeStyle.getAttribute("href") === "lm.css") {
                 themeStyle.setAttribute("href", "nm.css");
+                document.body.classList.add("night-mode");
                 sunIcon.style.display = "none";
                 moonIcon.style.display = "inline-block";
             } else {
                 themeStyle.setAttribute("href", "lm.css");
+                document.body.classList.remove("night-mode");
                 sunIcon.style.display = "inline-block";
                 moonIcon.style.display = "none";
             }
         });
     </script>
+    
 </body>
 </html>
