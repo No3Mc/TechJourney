@@ -121,44 +121,78 @@ footer {
 }
 
 
-.my-image {
-    width: 360px;
-    height: 460px;
-}
-
-.my-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-/* Add animation and transitions to the profile image */
-.my-image img {
-    transition: opacity 0.3s, transform 0.3s;
-}
-
-/* Define a custom animation */
-@keyframes imageHover {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-/* Apply the animation on image hover */
-.my-image img:hover {
-    opacity: 0.6;
-    animation: imageHover 1s infinite; 
-}
-
 .nav-link.active {
     text-decoration: underline;
     font-weight: bold;
 }
 
+
+.tab1-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
+}
+
+.tab1-left {
+    flex: 1;
+    padding-right: 20px;
+}
+
+/* .tab1-left img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    display: block;
+} */
+
+
+.tab1-right {
+    flex: 2;
+    padding-left: 20px;
+}
+
+.tab1-description {
+    font-size: 21px;
+    color: #333;
+}
+
+
+
+.tab2-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
+}
+
+.tab2-left {
+    flex: 1;
+    padding-right: 20px;
+}
+
+/* .tab1-left img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    display: block;
+} */
+
+
+.tab2-right {
+    flex: 2;
+    padding-left: 20px;
+}
+
+.tab2-description {
+    font-size: 21px;
+    color: #333;
+}
