@@ -3,27 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beyond Boundaries: My Works</title>
+    <title>Beyond Boundaries: Portfolio by Syed</title>
     <link rel="icon" href="logo.png" type="image/png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="nm.css" id="theme-style">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+        
+        .portfolio-text {
+            font-family: 'Roboto', sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            color: #000;
+        }
+    </style>
     <script>
         function openLinkInSameTab(url) {
             window.location.href = url;
         }
     </script>
+
+
+    <style>
+        /* Apply the fade-in animation to the portfolio-text */
+        .portfolio-text {
+            color: #fff;
+            font-size: 24px;
+            margin-right: 10px;
+            text-decoration: none;
+            transition: color 0.3s;
+            animation: fadeIn 1.5s forwards;
+        }
+        
+        /* Keyframes for fade-in animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+
 </head>
-
-
-
-
-
-
 <body class="night-mode">
     <header>
         <div class="profile-section">
             <div class="portfolio-text">
+                <a href="https://no3mc.com" class="portfolio-text" target="_blank" rel="noopener">
                 Portfolio by Syed
             </div>
             <div class="social-icons">
@@ -39,12 +68,18 @@
         </div>
         <nav>
             <ul>
-                <li><a href="/about" data-link="about">About</a></li>
-                <li><a href="works.html" data-link="works" class="active">Works</a></li>
-                <li><a href="/contact" data-link="contact">Contact</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="works.html">Works</a></li>
+                <li><a href="/contact">Contact</a></li>
             </ul>
         </nav>
     </header>
+
+    <footer>
+        <p>&copy; 2023 Syed Naqvi. All rights reserved.</p>
+    </footer>
+
+
     <h1 class="content-heading">My Works</h1>
 
 
@@ -80,16 +115,6 @@
 
 
 
-
-
-
-
-
-
-
-    <footer>
-        <p>&copy; 2023 Syed Naqvi. All rights reserved.</p>
-    </footer>
     <script>
         const themeToggle = document.getElementById("theme-toggle");
         const themeStyle = document.getElementById("theme-style");
