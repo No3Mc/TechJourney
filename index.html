@@ -72,7 +72,34 @@
             </ul>
         </nav>
     </header>
-    <h1 class="content-heading">Working on it</h1>
+
+
+
+
+
+    <div class="center-container">
+        <button class="glowing-circuit-button" id="glowing-button">
+            <div class="glowing-circuit-container">
+                <div class="glowing-circuit">
+                    <div class="glow-effect"></div>
+                    <div class="circuit-lines"></div>
+                </div>
+            </div>
+        </button>
+        <div id="shattered-pieces" class="shattered-pieces hidden">
+            <!-- Shattered pieces will be added here -->
+        </div>
+    </div>
+      
+
+
+
+
+
+
+
+
+
 
     <div class="tab1-box">
 
@@ -112,6 +139,7 @@
             }
         });
     </script>
+    
     <script>
         const currentPage = location.pathname.split('/').slice(-1)[0];
     
@@ -123,7 +151,41 @@
         });
     </script>
     
+<script>
+    
+    const glowingButton = document.getElementById("glowing-button");
+    const shatteredPiecesContainer = document.getElementById("shattered-pieces");
+    
+    glowingButton.addEventListener("click", () => {
+        glowingButton.style.display = "none";
+        shatteredPiecesContainer.classList.remove("hidden");
+    
+        const numPieces = 20;
+        for (let i = 0; i < numPieces; i++) {
+            const piece = document.createElement("div");
+            piece.className = "shattered-piece";
+            piece.style.setProperty("--shift-x", Math.random() * 200 - 100 + "px");
+            piece.style.setProperty("--shift-y", Math.random() * 200 - 100 + "px");
+            piece.style.setProperty("--rotation", Math.random() * 360 + "deg");
+            shatteredPiecesContainer.appendChild(piece);
+        }
+    
+        setTimeout(() => {
+            shatteredPiecesContainer.style.opacity = "1";
+        }, 100);
+    
+        setTimeout(() => {
+            shatteredPiecesContainer.style.opacity = "0";
+            setTimeout(() => {
+                shatteredPiecesContainer.classList.add("hidden");
+                shatteredPiecesContainer.innerHTML = "";
 
+            }, 500);
+        }, 1500);
+    });
+    
+
+</script>
 
 
 </body>

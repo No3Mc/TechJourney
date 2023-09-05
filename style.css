@@ -153,3 +153,145 @@ footer {
 
 
 
+
+
+
+
+
+
+
+
+/* Style for the shattered pieces container */
+.shattered-pieces {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+/* Style for each shattered piece */
+.shattered-piece {
+    width: 50px;
+    height: 50px;
+    background-color: #ffc107;
+    border-radius: 50%;
+    position: absolute;
+    animation: shatterAnimation 1s ease-in-out forwards;
+}
+
+@keyframes shatterAnimation {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(calc(-50% + var(--shift-x, 0))) translateY(calc(-50% + var(--shift-y, 0))) rotate(var(--rotation, 0deg));
+    }
+}
+
+
+
+
+
+
+
+
+/* Style for the center container */
+.center-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Style for the glowing circuit button */
+.glowing-circuit-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+    transition: transform 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glowing-circuit-button:hover {
+    transform: scale(1.05);
+}
+
+/* Style for the glowing circuit container */
+.glowing-circuit-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    margin-top: 30px;
+  }
+  
+  /* Style for the glowing circuit */
+  .glowing-circuit {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-color: #222;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  }
+  
+  /* Style for the glow effect */
+  .glow-effect {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background-color: #ffc107;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: glowAnimation 2s infinite alternate;
+  }
+  
+  @keyframes glowAnimation {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 0.8;
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1.2);
+      opacity: 0;
+    }
+  }
+  
+  /* Style for the circuit lines */
+  .circuit-lines {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background-color: transparent;
+    border: 2px solid #ffc107;
+    border-radius: 50%;
+    box-sizing: border-box;
+    z-index: 1;
+  }
+  
