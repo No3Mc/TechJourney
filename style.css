@@ -11,6 +11,10 @@ body {
     font-family: Arial, sans-serif;
 }
 
+
+
+
+
 /* Style for the site header */
 header {
     background-color: #333;
@@ -19,6 +23,17 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    top: -100px;
+    opacity: 0;
+    animation: dropDown 1s forwards 2.5s;
+}
+/* Keyframes for the drop-down effect */
+@keyframes dropDown {
+    to {
+        top: 0;
+        opacity: 1;
+    }
 }
 
 /* Style for the profile section */
@@ -136,6 +151,9 @@ footer {
     border-radius: 30px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     margin-top: 50px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s, transform 1s;
 }
 
 
@@ -172,7 +190,7 @@ footer {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    z-index: 1000;
+    z-index: 1000; 
     pointer-events: none;
 }
 

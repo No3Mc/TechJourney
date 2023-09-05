@@ -8,39 +8,24 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="nm.css" id="theme-style">
+
+
+
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-        
-        .portfolio-text {
-            font-family: 'Roboto', sans-serif;
-            font-size: 20px;
-            font-weight: bold;
-            color: #000;
-        }
-    </style>
-
-
-
-    <style>
         /* Apply the fade-in animation to the portfolio-text */
         .portfolio-text {
+            font-family: 'Roboto', sans-serif;
+            font-weight: bold;
             color: #fff;
             font-size: 24px;
             margin-right: 10px;
             text-decoration: none;
             transition: color 0.3s;
-            animation: fadeIn 1.5s forwards;
         }
         
-        /* Keyframes for fade-in animation */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
+
     </style>
 
 </head>
@@ -120,11 +105,12 @@
         <p>&copy; 2023 Syed Naqvi. All rights reserved.</p>
     </footer>
     <script>
+        // Toggle theme
         const themeToggle = document.getElementById("theme-toggle");
         const themeStyle = document.getElementById("theme-style");
         const sunIcon = document.getElementById("sun-icon");
         const moonIcon = document.getElementById("moon-icon");
-    
+        
         themeToggle.addEventListener("click", () => {
             if (themeStyle.getAttribute("href") === "lm.css") {
                 themeStyle.setAttribute("href", "nm.css");
@@ -138,54 +124,58 @@
                 moonIcon.style.display = "none";
             }
         });
-    </script>
     
-    <script>
+        // Highlight current page
         const currentPage = location.pathname.split('/').slice(-1)[0];
-    
         const navLinks = document.querySelectorAll('.nav-link');
         navLinks.forEach(link => {
             if (link.getAttribute('href') === currentPage) {
                 link.classList.add('active');
             }
         });
+    
+        // Glow button shattered animation and reveal content
+        const glowingButton = document.getElementById("glowing-button");
+        const shatteredPiecesContainer = document.getElementById("shattered-pieces");
+        const centerContainer = document.querySelector(".center-container");
+        
+        glowingButton.addEventListener("click", () => {
+            glowingButton.style.display = "none";
+            shatteredPiecesContainer.classList.remove("hidden");
+        
+            const numPieces = 20;
+            for (let i = 0; i < numPieces; i++) {
+                const piece = document.createElement("div");
+                piece.className = "shattered-piece";
+                piece.style.setProperty("--shift-x", Math.random() * 200 - 100 + "px");
+                piece.style.setProperty("--shift-y", Math.random() * 200 - 100 + "px");
+                piece.style.setProperty("--rotation", Math.random() * 360 + "deg");
+                shatteredPiecesContainer.appendChild(piece);
+            }
+        
+            setTimeout(() => {
+                shatteredPiecesContainer.style.opacity = "1";
+            }, 100);
+        
+            setTimeout(() => {
+                shatteredPiecesContainer.style.opacity = "0";
+                setTimeout(() => {
+                    shatteredPiecesContainer.classList.add("hidden");
+                    shatteredPiecesContainer.innerHTML = "";
+                    centerContainer.style.opacity = "0";
+                    document.querySelector('.tab1-box').style.opacity = "1";
+                    document.querySelector('.tab1-box').style.transform = "translateY(0px)";
+                    document.querySelector('.portfolio-text').style.animation = "fadeIn 2.5s forwards";
+                    setTimeout(() => {
+                        centerContainer.style.display = "none";
+                    }, 1000);
+                }, 500);
+            }, 1500);
+            
+            
+        });
     </script>
     
-<script>
-    
-    const glowingButton = document.getElementById("glowing-button");
-    const shatteredPiecesContainer = document.getElementById("shattered-pieces");
-    
-    glowingButton.addEventListener("click", () => {
-        glowingButton.style.display = "none";
-        shatteredPiecesContainer.classList.remove("hidden");
-    
-        const numPieces = 20;
-        for (let i = 0; i < numPieces; i++) {
-            const piece = document.createElement("div");
-            piece.className = "shattered-piece";
-            piece.style.setProperty("--shift-x", Math.random() * 200 - 100 + "px");
-            piece.style.setProperty("--shift-y", Math.random() * 200 - 100 + "px");
-            piece.style.setProperty("--rotation", Math.random() * 360 + "deg");
-            shatteredPiecesContainer.appendChild(piece);
-        }
-    
-        setTimeout(() => {
-            shatteredPiecesContainer.style.opacity = "1";
-        }, 100);
-    
-        setTimeout(() => {
-            shatteredPiecesContainer.style.opacity = "0";
-            setTimeout(() => {
-                shatteredPiecesContainer.classList.add("hidden");
-                shatteredPiecesContainer.innerHTML = "";
-
-            }, 500);
-        }, 1500);
-    });
-    
-
-</script>
 
 
 </body>
