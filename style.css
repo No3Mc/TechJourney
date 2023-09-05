@@ -138,20 +138,8 @@ footer {
     margin-top: 50px;
 }
 
-.tab1-left {
-    flex: 1;
-    padding-right: 20px;
-}
 
-/* .tab1-left img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 50%;
-    display: block;
-} */
-
-
-.tab1-right {
+.tab1 {
     flex: 2;
     padding-left: 20px;
 }
@@ -163,36 +151,5 @@ footer {
 
 
 
-.tab2-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    background-color: #f0f0f0;
-    border-radius: 30px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    margin-top: 50px;
-}
-
-.tab2-left {
-    flex: 1;
-    padding-right: 20px;
-}
-
-/* .tab1-left img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 50%;
-    display: block;
-} */
 
 
-.tab2-right {
-    flex: 2;
-    padding-left: 20px;
-}
-
-.tab2-description {
-    font-size: 21px;
-    color: #333;
-}
