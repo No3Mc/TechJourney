@@ -258,6 +258,18 @@
                     const targetElement = document.getElementById(targetId);
         
                     if (targetElement) {
+
+                        const previouslyPulsed = document.querySelector('.pulse-content');
+                        if (previouslyPulsed) {
+                            previouslyPulsed.classList.remove('pulse-content');
+                        }
+                        
+
+                        targetElement.classList.add('pulse-content');
+                        setTimeout(() => {
+                            targetElement.classList.remove('pulse-content');
+                        }, 1000);
+        
                         window.history.pushState({}, '', this.getAttribute('href'));
                         window.scrollTo({
                             top: targetElement.offsetTop,
@@ -267,6 +279,8 @@
                 });
             });
         });
+        
+        
 
     </script>
     

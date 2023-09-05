@@ -369,3 +369,20 @@ body.night-mode .tab1-box:hover {
     color: rgba(255, 255, 255, 0.7);
     margin: 0;
 }
+
+
+@keyframes pulseAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(.55);  /* the scale factor */
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.pulse-content {
+    animation: pulseAnimation 1s;
+}
