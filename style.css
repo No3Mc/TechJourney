@@ -157,4 +157,8 @@ footer {
     animation: imageHover 1s infinite; 
 }
 
+.nav-link.active {
+    text-decoration: underline;
+    font-weight: bold;
+}
 

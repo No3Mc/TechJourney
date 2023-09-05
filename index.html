@@ -66,8 +66,8 @@
         </div>
         <nav>
             <ul>
-                <li><a href="/about">About</a></li>
-                <li><a href="works.html">Works</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="works.html" class="nav-link">Works</a></li>
                 <li><a href="/contact">Contact</a></li>
             </ul>
         </nav>
@@ -101,5 +101,19 @@
             }
         });
     </script>
+    <script>
+        const currentPage = location.pathname.split('/').slice(-1)[0];
+    
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            if (link.getAttribute('href') === currentPage) {
+                link.classList.add('active');
+            }
+        });
+    </script>
+    
+
+
+
 </body>
 </html>
