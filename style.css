@@ -1,24 +1,19 @@
 /* Reset default margin and padding */
-body, h1, {
+body, h1 {
     margin: 0;
     padding: 0;
 }
 
-
 /* Set background color and font for the body */
 body {
-    background-color: #f2f2f2;
+    background-color: #e6f7ff;
     font-family: Arial, sans-serif;
 }
 
-
-
-
-
 /* Style for the site header */
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #2c3e50;
+    color: #ecf0f1;
     padding: 10px 0;
     display: flex;
     align-items: center;
@@ -28,6 +23,7 @@ header {
     opacity: 0;
     animation: dropDown 1s forwards 2.5s;
 }
+
 /* Keyframes for the drop-down effect */
 @keyframes dropDown {
     to {
@@ -43,8 +39,6 @@ header {
     margin-left: 30px;
 }
 
-
-
 /* Style for social icons */
 .social-icons {
     display: flex;
@@ -53,17 +47,14 @@ header {
 }
 
 .social-icons a {
-    color: #fff;
+    color: #ecf0f1; 
     font-size: 24px;
     margin-right: 10px;
     text-decoration: none;
-
 }
 
-
-
 .social-icons a:hover {
-    color: #ffc107;
+    color: #3498db;
 }
 
 /* Style for the navigation */
@@ -80,37 +71,16 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #ecf0f1;
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #ffc107;
+    color: #3498db;
 }
 
-/* Light mode styles for the footer */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Dark mode styles for the footer */
-.night-mode footer {
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
 
 
 /* Style for the content heading */
@@ -118,13 +88,14 @@ footer {
     text-align: center;
     margin-top: 20px;
     font-size: 24px;
-    color: #000000;
+    color: #2c3e50;
 }
+
 #theme-toggle {
     background: none;
     border: none;
     font-size: 24px;
-    color: #fff;
+    color: #ecf0f1;
     cursor: pointer;
     margin-right: 20px;
     transition: color 0.3s;
@@ -132,7 +103,7 @@ footer {
 }
 
 #theme-toggle:hover {
-    color: #ffc107;
+    color: #3498db;
 }
 
 
@@ -150,7 +121,7 @@ footer {
 
 
 .tab1-box {
-    background-color: rgba(0, 0, 0, 0.1); 
+    background-color: rgba(44, 62, 80, 0.1);
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     overflow: hidden; 
@@ -334,43 +305,83 @@ body.night-mode .tab1-box:hover {
   }
   
 
+body {
+    font-family: 'Arial', sans-serif;
+}
 
-  .toolbox-container {
+.content-heading {
+    text-align: center;
+    color: #333;
+    margin-top: 50px;
+    font-size: 2.5em;
+    font-weight: 500;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+/* Style for the toolbox container */
+.toolbox-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 20px;
-    background-color: rgba(0, 0, 0, 0.05);
-    padding: 30px;
-    border-radius: 5px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    margin: 20px 0;
+    background: linear-gradient(135deg, #3a3a4f 0%, #2c3e50 100%);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    margin: 40px 0;
 }
 
 .skill-category {
-    background-color: #222;
-    background: linear-gradient(135deg, #333, #222);
+    background: linear-gradient(135deg, #3a3a4f 0%, #2e2e46 100%);
     padding: 20px;
-    border-radius: 5px;
-    transition: transform 0.3s, box-shadow 0.3s;
-
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    border: 2px solid transparent;
+    color: #ecf0f1;  /* A light complementary color for the text */
 }
 
 .skill-category:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 35px rgba(255, 255, 255, 0.3);
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-color: #3498db;
+}
+
+.skill-category i {
+    margin-right: 10px;
+    font-size: 1.4em;
+    transition: 0.3s all;
+}
+
+.skill-category i:hover {
+    transform: scale(1.1);
+    filter: brightness(1.5);
 }
 
 .skill-category h2 {
-    font-size: 18px;
-    color: #fff;
+    font-size: 1.5em;
+    color: #ecf0f1;
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
+}
+
+.skill-category h3 {
+    font-size: 1.2em;
+    color: #f39c12;
+    margin-top: 20px;
     margin-bottom: 10px;
 }
 
 .skill-category p {
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.7);
-    margin: 0;
+    font-size: 1em;
+    color: rgba(236, 240, 241, 0.9);
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
 }
 
 .stacked-categories {
@@ -385,7 +396,6 @@ body.night-mode .tab1-box:hover {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-
 
 .expand-height {
     flex: 1;
@@ -427,7 +437,17 @@ body.night-mode .tab1-box:hover {
 
 
 
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
 
+.copyright {
+    font-size: 14px;
+    margin: 0;
+}
 
 
 
