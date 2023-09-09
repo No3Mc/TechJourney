@@ -21,7 +21,7 @@ header {
     position: relative;
     top: -100px;
     opacity: 0;
-    animation: dropDown 1s forwards 0.2s;
+    animation: dropDown 1s forwards 0.1s;
 }
 
 /* Keyframes for the drop-down effect */
