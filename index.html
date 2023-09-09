@@ -68,19 +68,7 @@
 
 
 
-    <div class="center-container">
-        <button class="glowing-circuit-button" id="glowing-button">
-            <div class="glowing-circuit-container">
-                <div class="glowing-circuit">
-                    <div class="glow-effect"></div>
-                    <div class="circuit-lines"></div>
-                </div>
-            </div>
-        </button>
-        <div id="shattered-pieces" class="shattered-pieces hidden">
-            <!-- Shattered pieces will be added here -->
-        </div>
-    </div>
+
       
 
 
@@ -319,46 +307,7 @@
             }
         });
     
-        // Glow button shattered animation and reveal content
-        const glowingButton = document.getElementById("glowing-button");
-        const shatteredPiecesContainer = document.getElementById("shattered-pieces");
-        const centerContainer = document.querySelector(".center-container");
-        
-        glowingButton.addEventListener("click", () => {
-            glowingButton.style.display = "none";
-            shatteredPiecesContainer.classList.remove("hidden");
-        
-            const numPieces = 20;
-            for (let i = 0; i < numPieces; i++) {
-                const piece = document.createElement("div");
-                piece.className = "shattered-piece";
-                piece.style.setProperty("--shift-x", Math.random() * 200 - 100 + "px");
-                piece.style.setProperty("--shift-y", Math.random() * 200 - 100 + "px");
-                piece.style.setProperty("--rotation", Math.random() * 360 + "deg");
-                shatteredPiecesContainer.appendChild(piece);
-            }
-        
-            setTimeout(() => {
-                shatteredPiecesContainer.style.opacity = "1";
-            }, 100);
-        
-            setTimeout(() => {
-                shatteredPiecesContainer.style.opacity = "0";
-                setTimeout(() => {
-                    shatteredPiecesContainer.classList.add("hidden");
-                    shatteredPiecesContainer.innerHTML = "";
-                    centerContainer.style.opacity = "0";
-                    document.querySelector('.tab1-box').style.opacity = "1";
-                    document.querySelector('.tab1-box').style.transform = "translateY(0px)";
-                    document.querySelector('.portfolio-text').style.animation = "fadeIn 2.5s forwards";
-                    setTimeout(() => {
-                        centerContainer.style.display = "none";
-                    }, 1000);
-                }, 500);
-            }, 1500);
-            
-            
-        });
+
 
         document.addEventListener('DOMContentLoaded', function () {
             const navLinks = document.querySelectorAll('.nav-link');
