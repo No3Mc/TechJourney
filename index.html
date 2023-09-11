@@ -29,7 +29,8 @@
     </style>
 
 </head>
-<body class="night-mode">
+<body class="night-mode scroll-smoothly">
+
     <header>
         <div class="profile-section">
             <div class="portfolio-text">
@@ -53,9 +54,9 @@
 
         <nav>
             <ul>
-                <li><a href="/works" class="nav-link" data-target="works">Works</a></li>
-                <li><a href="/toolbox" class="nav-link" data-target="toolbox">ToolBox</a></li>
-                <li><a href="/projects" class="nav-link" data-target="projects">Projects</a></li>
+                <li><a href="#works" class="nav-link" data-target="works">Works</a></li>
+                <li><a href="#toolbox" class="nav-link" data-target="toolbox">ToolBox</a></li>
+                <li><a href="#projects" class="nav-link" data-target="projects">Projects</a></li>
             </ul>
         </nav>
 
@@ -298,48 +299,10 @@
             }
         });
     
-        // Highlight current page
-        const currentPage = location.pathname.split('/').slice(-1)[0];
-        const navLinks = document.querySelectorAll('.nav-link');
-        navLinks.forEach(link => {
-            if (link.getAttribute('href') === currentPage) {
-                link.classList.add('active');
-            }
-        });
+
     
 
 
-        document.addEventListener('DOMContentLoaded', function () {
-            const navLinks = document.querySelectorAll('.nav-link');
-        
-            navLinks.forEach(link => {
-                link.addEventListener('click', function(event) {
-                    event.preventDefault();
-                    const targetId = this.getAttribute('data-target');
-                    const targetElement = document.getElementById(targetId);
-        
-                    if (targetElement) {
-
-                        const previouslyPulsed = document.querySelector('.pulse-content');
-                        if (previouslyPulsed) {
-                            previouslyPulsed.classList.remove('pulse-content');
-                        }
-                        
-
-                        targetElement.classList.add('pulse-content');
-                        setTimeout(() => {
-                            targetElement.classList.remove('pulse-content');
-                        }, 1000);
-        
-                        window.history.pushState({}, '', this.getAttribute('href'));
-                        window.scrollTo({
-                            top: targetElement.offsetTop,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-        });
         
         
 
