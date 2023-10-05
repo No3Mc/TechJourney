@@ -1,0 +1,13 @@
+/* Styles for night mode */
+body {
+    background-color: #222;
+    color: #fff;
+}
+
+header {
+    background-color: #000;
+    color: #fff;
+}
+.content-heading {
+    color: #ffffff;
+}
