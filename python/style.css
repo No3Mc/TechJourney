@@ -528,3 +528,12 @@ video::-webkit-media-controls {
   @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
   
 
+  .btn-live-site {
+
+    cursor: not-allowed;
+  }
+  
+  .btn-live-site::before {
+
+    margin-right: 5px;
+  }
