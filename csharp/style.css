@@ -114,6 +114,9 @@ nav ul li a:hover {
 
 
 
+
+
+
 .tab1 {
     flex: 2;
     padding-left: 20px;
@@ -147,6 +150,10 @@ nav ul li a:hover {
 .tab1-description::first-line {
     font-weight: bold;
 }
+
+
+
+
 
 
 body.night-mode .tab1-box {
@@ -226,13 +233,17 @@ body {
     margin: 40px 0;
 }
 
+
+
+
+
 .skill-category {
     background: linear-gradient(135deg, #3a3a4f 0%, #2e2e46 100%);
     padding: 20px;
     border-radius: 8px;
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     border: 2px solid transparent;
-    color: #ecf0f1;  /* A light complementary color for the text */
+    color: #ecf0f1; 
 }
 
 .skill-category:hover {
@@ -388,6 +399,10 @@ body {
     margin: 40px 0;
 }
 
+
+
+
+
 .project {
     background: linear-gradient(135deg, #3a3a4f 0%, #2e2e46 100%);
     padding: 20px;
@@ -431,6 +446,9 @@ body {
     margin-left: 20px;
 }
 
+
+
+
 .btn-live-site,
 .btn-review-code {
     margin: 5px;
@@ -449,19 +467,16 @@ body {
     background-color: #2980b9;
 }
 
-video {
-    width: 100%;
-    max-width: 600px;
-    display: block;
-    margin: 0 auto;
-}
+.btn-live-site {
 
-/* Style for video player controls (adjust as needed) */
-video::-webkit-media-controls {
+    cursor: not-allowed;
+  }
+  
+  .btn-live-site::before {
 
-    color: white;
-    border-radius: 5px;
-}
+    margin-right: 5px;
+  }
+
 
 
 .skill-badge {
@@ -483,6 +498,8 @@ video::-webkit-media-controls {
 .skill-badge:hover {
     background-color: #2c3e50;
 }
+
+
 
 .scroll-smoothly {
     scroll-behavior: smooth;
@@ -528,13 +545,73 @@ video::-webkit-media-controls {
   @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
   
 
-  .btn-live-site {
 
-    cursor: not-allowed;
-  }
-  
-  .btn-live-site::before {
 
-    margin-right: 5px;
-  }
+
+
+
+
+
+
+
+.video-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.video-container video {
+    max-width: 45%; 
+}
+
+video {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 0 auto;
+}
+
+video::-webkit-media-controls {
+
+    color: white;
+    border-radius: 5px;
+}
+
+
+
+
+
+.main-video {
+    width: 100%;
+    max-width: 800px; 
+    margin: 0 auto;
+}
+
+.small-videos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.small-videos video {
+    width: calc(50% - 10px); 
+    max-width: 300px;
+}
+
+.main-video-container {
+    width: 100%;
+    max-width: 800px; 
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
 
