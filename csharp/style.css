@@ -579,31 +579,42 @@ video::-webkit-media-controls {
 
 
 
+.main-video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
 
 .main-video {
-    width: 100%;
-    max-width: 800px; 
-    margin: 0 auto;
+    flex: 2; 
+    max-width: 70%; 
 }
 
-.small-videos {
+.small-videos1 {
+    flex: 1;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
     gap: 20px;
 }
 
-.small-videos video {
-    width: calc(50% - 10px); 
-    max-width: 300px;
+
+.small-videos2 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
-.main-video-container {
-    width: 100%;
-    max-width: 800px; 
-    margin: 0 auto;
-}
+
+
+
+
+
+
 
 
 
