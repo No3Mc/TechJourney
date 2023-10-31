@@ -1,0 +1,22 @@
+{
+  "name": "techjourney",
+  "version": "1.0.0",
+  "description": "Personal Portfolio",
+  "main": "node.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/No3Mc/TechJourney.git"
+  },
+  "keywords": [
+    "Portfolio"
+  ],
+  "author": "No3Mc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/No3Mc/TechJourney/issues"
+  },
+  "homepage": "https://github.com/No3Mc/TechJourney#readme"
+}

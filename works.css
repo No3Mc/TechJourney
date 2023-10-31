@@ -1,0 +1,109 @@
+/* works.css */
+
+.works-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    background: linear-gradient(135deg, #3a3a4f 0%, #2c3e50 100%);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    margin: 40px 0;
+}
+
+.project {
+    background: linear-gradient(135deg, #3a3a4f 0%, #2e2e46 100%);
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    border: 2px solid transparent;
+    color: #ecf0f1;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-color: #3498db;
+}
+
+.project h2 {
+    font-size: 1.5em;
+    color: #ecf0f1;
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.project p {
+    font-size: 1em;
+    color: rgba(236, 240, 241, 0.9);
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.project ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.btn-live-site,
+.btn-review-code {
+    margin: 5px;
+    display: inline-block;
+    margin-right: 10px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-live-site:hover,
+.btn-review-code:hover {
+    background-color: #2980b9;
+}
+
+video {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Style for video player controls (adjust as needed) */
+video::-webkit-media-controls {
+    color: white;
+    border-radius: 5px;
+}
+
+.skill-badge {
+    display: inline-block;
+    margin: 5px;
+    background-color: #3498db;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.8em;
+    vertical-align: middle;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.skill-badge:hover {
+    background-color: #2c3e50;
+}
+
+.scroll-smoothly {
+    scroll-behavior: smooth;
+}
