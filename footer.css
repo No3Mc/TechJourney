@@ -36,6 +36,6 @@
 }
 
 .social a:hover {
-  color: #3498db; /* Change to a desired hover color */
+  color: #3498db;
   transform: scale(1.1);
 }
