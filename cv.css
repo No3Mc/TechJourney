@@ -27,6 +27,7 @@
   .pdf-container {
     flex-direction: column;
     align-items: center;
+    margin-top: 20px;
   }
   
   @media only screen and (max-width: 768px) {
@@ -35,37 +36,54 @@
     }
   }
   
-  /* Button Styling */
 #download-cv {
-    background-color: #007BFF;
-    color: #fff;
-    border-radius: 20px;
-    padding: 12px 25px;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 0.5px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
-    font-size: 1em; 
+    display: inline; 
+    margin-left: 10px; 
+    background-color: #007BFF; 
+    color: #FFFFFF; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+    text-transform: uppercase; 
+    font-weight: 600;
+    letter-spacing: 1px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.2); 
+    font-size: 0.8rem;
+    line-height: 1.5; 
+    display: inline-block; 
+    margin: 0; 
+    text-align: center; 
+    vertical-align: middle; 
 }
 
-#download-cv:hover {
-    background-color: #0056b3;
-    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.5);
+#download-cv:hover,
+#download-cv:focus {
+    background-color: #0056b3; 
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3); 
+    transform: translateY(-2px);
 }
 
-/* CV Section Styling */
+#download-cv:active {
+    transform: translateY(1px); 
+    box-shadow: 0 2px 3px rgba(0, 123, 255, 0.2); 
+}
+
+#download-cv:disabled {
+    background-color: #CCCCCC; 
+    cursor: not-allowed; 
+    box-shadow: none; 
+}
+
 #cv {
     margin-top: 2em;
     font-size: 2em; 
     text-align: center; 
+    
 }
 
-#download-cv {
-    display: block; 
-    margin: 1em auto; 
-}
+
 
 body {
     font-family: 'Arial', sans-serif; 
@@ -99,4 +117,9 @@ ul, li {
     content: "";
   }
     
-  
+  @media only screen and (max-width: 768px) {
+    #download-cv {
+        padding: 8px 16px; 
+        font-size: 0.7em; 
+    }
+}
