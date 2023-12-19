@@ -79,7 +79,11 @@ nav ul li a:hover {
     line-height: 1.6;
     color: #333; 
     font-family: 'Roboto', sans-serif;
+    padding: 0 20px;
+    text-align: center;
 }
+
+
 
 body.night-mode .tab1-box {
     background-color: #333;
