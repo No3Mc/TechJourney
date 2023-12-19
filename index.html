@@ -185,18 +185,23 @@
     </div>
     
 
+<div class="content-heading"> 
+    <div class="cv-container">
+        <h1 class="content-heading" id="cva">CV</h1>
+        <a href="#" id="download-cv" aria-label="Download CV">
+            <i class="fa fa-download" aria-hidden="true"></i> Download
+        </a>
+    </div>
 
-    <h1 class="content-heading"  id="cv">CV <a href="#" id="download-cv" aria-label="Download CV"><i class="fa fa-download" aria-hidden="true"></i> Download</a></h1>
     <div class="pdf-container">
+        <iframe src="https://docs.google.com/gview?url=https://no3mc.com/cv.pdf&embedded=true" frameborder="0"></iframe>
+    </div>
+</div>
+
+    <!-- <div class="pdf-container">
         <canvas id="pdf-canvas-1" class="pdf-canvas"></canvas>
         <canvas id="pdf-canvas-2" class="pdf-canvas"></canvas>
-    </div>
-    
-               
-
-
-
-
+    </div> -->
 
 
     <footer class="footer">
@@ -240,36 +245,6 @@
     </script>
  
     <script type="module">
-        import { getDocument } from 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.0.269/pdf.mjs';
-
-        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.0.269/pdf.worker.mjs';
-        
-        getDocument('https://no3mc.com/cv.pdf').promise.then(pdfDoc_ => {
-          // First page
-          pdfDoc_.getPage(1).then(page => {
-            renderPage(page, 'pdf-canvas-1');
-          });
-        
-          // Second page
-          pdfDoc_.getPage(2).then(page => {
-            renderPage(page, 'pdf-canvas-2');
-          });
-        });
-        
-        function renderPage(page, canvasId) {
-          var scale = 1.5;
-          var viewport = page.getViewport({ scale: scale });
-          var canvas = document.getElementById(canvasId);
-          var context = canvas.getContext('2d');
-          canvas.height = viewport.height;
-          canvas.width = viewport.width;
-        
-          var renderTask = page.render({ canvasContext: context, viewport: viewport });
-          renderTask.promise.then(() => {
-            console.log('Page rendered', canvasId);
-          });
-        }
-
 
         document.getElementById('download-cv').addEventListener('click', function(event) {
             event.preventDefault(); 
@@ -293,7 +268,7 @@
 
 
 
-        
+
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
               e.preventDefault();

@@ -106,3 +106,13 @@ body.night-mode .tab1-box:hover {
     text-decoration: none;
     transition: color 0.3s;
 }
+
+ul, li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  element::before, element::after {
+    content: "";
+  }
+    
