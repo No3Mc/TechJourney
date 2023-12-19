@@ -93,3 +93,16 @@ body.night-mode .tab1-box:hover {
 
 /* Font Awesome import here */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* Apply the fade-in animation to the portfolio-text */
+.portfolio-text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #fff;
+    font-size: 24px;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}

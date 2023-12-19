@@ -17,22 +17,6 @@
 
 
 
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-        /* Apply the fade-in animation to the portfolio-text */
-        .portfolio-text {
-            font-family: 'Roboto', sans-serif;
-            font-weight: bold;
-            color: #fff;
-            font-size: 24px;
-            margin-right: 10px;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-
-    </style>
-
 </head>
 <body class="night-mode scroll-smoothly">
     
@@ -203,9 +187,9 @@
 
 
 
+    <h1 id="cv">CV</h1>
 
-        <h1 id="cv">CV</h1>
-
+        <li><a href="#" id="download-cv" aria-label="Download CV">Download</a></li>
         <div class="pdf-container">
             <canvas id="pdf-canvas-1" class="pdf-canvas"></canvas>
             <canvas id="pdf-canvas-2" class="pdf-canvas"></canvas>
@@ -287,6 +271,36 @@
             console.log('Page rendered', canvasId);
           });
         }
+
+
+        document.getElementById('download-cv').addEventListener('click', function(event) {
+            event.preventDefault(); 
+        
+            fetch('https://no3mc.com/cv.pdf')
+                .then(response => response.blob()) 
+                .then(blob => {
+                    const link = document.createElement('a');
+                    link.href = window.URL.createObjectURL(blob);
+                    link.download = 'Syed_Naqvi_CV.pdf';
+                    document.body.appendChild(link);
+                    link.click();
+                    link.remove();
+                    window.URL.revokeObjectURL(link.href);
+                })
+                .catch(() => alert('Download failed, please try again.'));
+        });
+        
+        
+
+
+
+
+
+
+
+
+
+
         
       </script>
       

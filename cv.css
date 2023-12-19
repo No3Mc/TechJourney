@@ -18,20 +18,85 @@
     from { opacity: 0; }
     to { opacity: 1; }
 }
-#pdf-canvas {
-    border: 1px solid black; 
-    display: block; 
-    margin: 0 auto; 
+.pdf-canvas {
+    border: 1px solid black;
+    max-width: 100%;
+    height: auto;
   }
-
+  
   .pdf-container {
-    display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
   
-  .pdf-canvas {
-    border: 1px solid black; 
-    margin: 0 10px; 
+  @media only screen and (max-width: 768px) {
+    .pdf-canvas {
+      margin-bottom: 20px; 
+    }
   }
   
+  /* Button Styling */
+#download-cv {
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 20px;
+    padding: 12px 25px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+    font-size: 1em; 
+}
+
+#download-cv:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.5);
+}
+
+/* CV Section Styling */
+#cv {
+    margin-top: 2em;
+    font-size: 2em; 
+    text-align: center; 
+}
+
+#download-cv {
+    display: block; 
+    margin: 1em auto; 
+}
+
+body {
+    font-family: 'Arial', sans-serif; 
+}
+
+body, h1, h2, h3, p, a, button {
+    color: #333; 
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 768px) {
+    #download-cv {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+}
+ul, li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  element::before, element::after {
+    content: "";
+  }
+    
   
