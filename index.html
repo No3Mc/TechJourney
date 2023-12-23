@@ -182,23 +182,60 @@
     </div>
     
 
-<div class="content-heading"> 
-    <div class="cv-container" id="cv">
-        <h1 class="content-heading" id="cva">CV</h1>
-        <a href="#" id="download-cv" aria-label="Download CV">
-            <i class="fa fa-download" aria-hidden="true"></i> Download
-        </a>
-    </div>
+    <div class="content-heading">
+        <div class="cv-container" id="cv">
+            <h1 class="content-heading" id="cva"></h1>
+            <a href="#" id="downloadall" aria-label="Download All">
+                <i class="fas fa-arrow-down download-icon" aria-hidden="true"></i> Download All
+            </a>
+        </div>
+    
 
-    <div class="pdf-container">
+
+        
+        <div class="tab-container">
+            <div class="tab-button-container">
+                <button class="tab-button" onclick="showCV()">
+                    CV
+                    <span class="separator"></span>
+                    <i class="fas fa-arrow-down download-icon" data-pdf-url="https://no3mc.com/cv.pdf" data-file-name="Syed_Naqvi_CV.pdf"></i>
+                </button>
+            </div>
+            <div class="tab-button-container">
+                <button class="tab-button" onclick="showCoverLetter()">
+                    Cover Letter
+                    <span class="separator"></span>
+                    <i class="fas fa-arrow-down download-icon" data-pdf-url="https://no3mc.com/cover.pdf" data-file-name="Syed_Naqvi_Cover.pdf"></i>
+                </button>
+            </div>
+            <div class="tab-button-container">
+                <button class="tab-button" onclick="showAboutMe()">
+                    About Me
+                    <span class="separator"></span>
+                    <i class="fas fa-arrow-down download-icon" data-pdf-url="https://no3mc.com/about.pdf" data-file-name="Syed_Naqvi_About.pdf"></i>
+                </button>
+            </div>
+        </div>
+        
+    
+
+
+
+
+
+    <div class="pdf-container" id="cv-container">
         <iframe src="https://docs.google.com/gview?url=https://no3mc.com/cv.pdf&embedded=true" frameborder="0"></iframe>
     </div>
-</div>
-
-    <!-- <div class="pdf-container">
-        <canvas id="pdf-canvas-1" class="pdf-canvas"></canvas>
-        <canvas id="pdf-canvas-2" class="pdf-canvas"></canvas>
-    </div> -->
+    <div class="pdf-container" id="cover-letter-container">
+        <iframe src="https://docs.google.com/gview?url=https://no3mc.com/cover.pdf&embedded=true" frameborder="0"></iframe>
+    </div>
+    <div class="pdf-container" id="about-me-container">
+        <iframe src="https://docs.google.com/gview?url=https://no3mc.com/about.pdf&embedded=true" frameborder="0"></iframe>
+    </div>
+    
+    
+    </div>
+      
 
 
     <footer class="footer">
@@ -243,24 +280,45 @@
  
     <script type="module">
 
-        document.getElementById('download-cv').addEventListener('click', function(event) {
-            event.preventDefault(); 
-        
-            fetch('https://no3mc.com/cv.pdf')
-                .then(response => response.blob()) 
-                .then(blob => {
-                    const link = document.createElement('a');
-                    link.href = window.URL.createObjectURL(blob);
-                    link.download = 'Syed_Naqvi_CV.pdf';
-                    document.body.appendChild(link);
-                    link.click();
-                    link.remove();
-                    window.URL.revokeObjectURL(link.href);
-                })
-                .catch(() => alert('Download failed, please try again.'));
+
+
+const pdfs = [
+    { url: 'https://no3mc.com/cv.pdf', fileName: 'Syed_Naqvi_CV.pdf' },
+    { url: 'https://no3mc.com/cover.pdf', fileName: 'Syed_Naqvi_Cover.pdf' },
+    { url: 'https://no3mc.com/about.pdf', fileName: 'Syed_Naqvi_About.pdf' },
+];
+
+document.querySelectorAll('[data-pdf-url]').forEach(button => {
+    button.addEventListener('click', function() {
+        const pdfUrl = this.getAttribute('data-pdf-url');
+        const fileName = this.getAttribute('data-file-name');
+        downloadPDF(pdfUrl, fileName);
+    });
+});
+
+document.getElementById('downloadall').addEventListener('click', function() {
+    const promises = pdfs.map(pdf => downloadPDF(pdf.url, pdf.fileName));
+    Promise.all(promises)
+        .then(() => alert('All PDFs downloaded successfully'))
+        .catch(() => alert('Download failed for one or more PDFs. Please try again.'));
+});
+
+function downloadPDF(pdfUrl, fileName) {
+    return fetch(pdfUrl)
+        .then(response => response.blob())
+        .then(blob => {
+            const link = document.createElement('a');
+            link.href = window.URL.createObjectURL(blob);
+            link.download = fileName;
+            document.body.appendChild(link);
+            link.click();
+            link.remove();
+            window.URL.revokeObjectURL(link.href);
         });
-        
-        
+}
+
+
+
 
 
 
@@ -302,7 +360,25 @@ function scrollToCVSection() {
         
       </script>
       
-      
+      <script>
+        function showCV() {
+            document.getElementById('cv-container').style.display = 'block';
+            document.getElementById('cover-letter-container').style.display = 'none';
+            document.getElementById('about-me-container').style.display = 'none';
+        }
+
+        function showCoverLetter() {
+            document.getElementById('cv-container').style.display = 'none';
+            document.getElementById('cover-letter-container').style.display = 'block';
+            document.getElementById('about-me-container').style.display = 'none';
+        }
+
+        function showAboutMe() {
+            document.getElementById('cv-container').style.display = 'none';
+            document.getElementById('cover-letter-container').style.display = 'none';
+            document.getElementById('about-me-container').style.display = 'block';
+        }
+    </script>
 
 
 

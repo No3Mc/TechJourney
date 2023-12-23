@@ -1,35 +1,87 @@
-.cv-container {
+#cv-container {
     text-align: center;
-    padding: 20px;
-}
-
-.content-heading {
-    font-size: 36px;
-    color: #333; 
-    margin-bottom: 10px; 
-}
-
-#download-cv {
-    text-decoration: none;
-    background-color: #007bff; 
-    color: #fff; 
-    padding: 10px 20px; 
-    border-radius: 5px; 
-    transition: background-color 0.3s ease; 
-}
-
-#download-cv:hover {
-    background-color: #0056b3; 
-}
-
-.pdf-container {
-    text-align: center;
-    margin-top: 20px; 
 }
 
 iframe {
     width: 100%;
-    max-width: 800px; 
-    height: 1200px; 
-    border: 1px solid #ccc; 
+    max-width: 800px;
+    height: 1200px;
+    border: 1px solid #ccc;
+}
+
+.content-heading {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#downloadall {
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#downloadall:hover {
+    background-color: #0056b3;
+}
+
+.pdf-container {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.tab-container {
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap; 
+    margin: 0 auto; 
+    max-width: 800px;
+}
+
+.tab-button-container {
+    flex: 1;
+    max-width: 200px; 
+    box-sizing: border-box; 
+}
+
+.tab-button {
+    width: 100%; 
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 10px; 
+}
+
+.tab-button:hover {
+    background-color: #2980b9;
+}
+
+.tab-button i {
+    margin-left: 10px;
+}
+
+.pdf-container a {
+    display: block;
+    margin-top: 10px;
+    color: #3498db;
+    text-decoration: none;
+}
+.fas.fa-arrow-down.download-icon {
+    padding-left: 5px; 
+    position: relative;
+    font-size: 20px;
+    margin-left: 5px;
+    color: #375da0;
+    border: 1px solid transparent; 
+    transition: border-color 0.3s; 
+}
+
+.fas.fa-arrow-down.download-icon:hover {
+
+    color: #020202;
+    cursor: pointer;
 }
