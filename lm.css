@@ -11,5 +11,42 @@ header {
 
 footer {
     background-color: #333;
-    color: #fff;
+    color: #ffffff;
+}
+.content-heading {
+    color: #000000;
+}
+
+
+
+
+.toolbox-container {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.skill-category {
+    background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
+    color: #000000;
+}
+
+.skill-category:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-color: #3498db;
+}
+
+.skill-category h2 {
+    color: #000000;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.skill-category h3 {
+    color: #f39c12;
+}
+
+.skill-category p {
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.stacked-categories {
+    gap: 20px;
 }

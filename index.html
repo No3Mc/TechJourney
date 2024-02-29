@@ -41,7 +41,7 @@
         </div>
 
         <div class="social-icons">
-            <li><a href="#cv" aria-label="CV"><i class="fas fa-file-pdf"></i> CV</a></li>
+            <li><a href="https://no3mc.com/cv.pdf" target="_blank" rel="noopener noreferrer" aria-label="CV"><i class="fas fa-file-pdf"></i> CV</a></li>
         </div>
         
 
@@ -53,7 +53,7 @@
     <div class="tab1-box">
         <div class="tab1">
             <p class="tab1-description"> 
-                Accomplished Computing graduate with a top-tier First-Class Honours distinction, recognised for academic excellence and outstanding leadership. Winner of the coveted Best Final Year Project Prize, hailed as a "Miracle Worker" for adeptly leading multiple successful teams. Committed to continuous innovation, fortified by cybersecurity certifications, and crowned as the Best Employee of 2020, showcasing a remarkable dedication to excellence in software development.
+                High-achieving Computing grad, leadership accolades, cybersecurity certified, top employee 2020.
             </p>
         </div>
     </div>
@@ -157,21 +157,21 @@
                 
             </div>
 
-        <div class="skill-category">
-            <h2>Testing Frameworks</h2>
+            <div class="skill-category">
+                <h2>Testing Frameworks</h2>
 
-            <h3>Core</h3>
+                <h3>Core</h3>
 
-            <p><i class="fas fa-vial"></i> NUnit</p>
-            <p><i class="fas fa-vial"></i> xUnit.Net</p>
+                <p><i class="fas fa-vial"></i> NUnit</p>
+                <p><i class="fas fa-vial"></i> xUnit.Net</p>
 
-            <h3>Secondary</h3>
+                <h3>Secondary</h3>
 
-            <p><i class="fas fa-vial"></i> Unittest</p>
+                <p><i class="fas fa-vial"></i> Unittest</p>
 
-            <p><i class="fas fa-vial"></i> Pytest</p>
+                <p><i class="fas fa-vial"></i> Pytest</p>
 
-        </div>
+            </div>
 
 
 
@@ -182,53 +182,7 @@
     </div>
     
 
-    <div class="content-heading">
-        <div class="cv-container" id="cv">
-            <h1 class="content-heading" id="cva"></h1>
-            <a id="downloadall" aria-label="Download All">
-                <i class="fas fa-arrow-down download-icon" aria-hidden="true"></i> Download All
-            </a>
-        </div>
-    
-
-
-        
-        <div class="tab-container">
-            <div class="tab-button-container">
-                <button class="tab-button" onclick="showCV()">
-                    CV
-                    <i class="fas fa-arrow-down download-icon" data-pdf-url="https://no3mc.com/cv.pdf" data-file-name="Syed_Naqvi_CV.pdf"></i>
-                </button>
-            </div>
-            <div class="tab-button-container">
-                <button class="tab-button" onclick="showCoverLetter()">
-                    Cover Letter
-                    <i class="fas fa-arrow-down download-icon" data-pdf-url="https://no3mc.com/cover.pdf" data-file-name="Syed_Naqvi_Cover.pdf"></i>
-                </button>
-            </div>
-            <div class="tab-button-container">
-                <button class="tab-button" onclick="showAboutMe()">
-                    About Me
-                    <i class="fas fa-arrow-down download-icon" data-pdf-url="https://no3mc.com/about.pdf" data-file-name="Syed_Naqvi_About.pdf"></i>
-                </button>
-            </div>
-        </div>
-        
-    
-
-
-
-
-
-    <div class="pdf-container" id="cv-container">
-        <iframe src="https://docs.google.com/gview?url=https://no3mc.com/cv.pdf&embedded=true" frameborder="0"></iframe>
-    </div>
-    <div class="pdf-container" id="cover-letter-container">
-        <iframe src="https://docs.google.com/gview?url=https://no3mc.com/cover.pdf&embedded=true" frameborder="0"></iframe>
-    </div>
-    <div class="pdf-container" id="about-me-container">
-        <iframe src="https://docs.google.com/gview?url=https://no3mc.com/about.pdf&embedded=true" frameborder="0"></iframe>
-    </div>
+   
     
     
     </div>
@@ -268,99 +222,6 @@
             }
         });
 
-
-
-        
-
-const pdfs = [
-    { url: 'https://no3mc.com/cv.pdf', fileName: 'Syed_Naqvi_CV.pdf' },
-    { url: 'https://no3mc.com/cover.pdf', fileName: 'Syed_Naqvi_Cover.pdf' },
-    { url: 'https://no3mc.com/about.pdf', fileName: 'Syed_Naqvi_About.pdf' },
-];
-
-document.querySelectorAll('[data-pdf-url]').forEach(button => {
-    button.addEventListener('click', function() {
-        const pdfUrl = this.getAttribute('data-pdf-url');
-        const fileName = this.getAttribute('data-file-name');
-        downloadPDF(pdfUrl, fileName);
-    });
-});
-
-document.getElementById('downloadall').addEventListener('click', function() {
-    const promises = pdfs.map(pdf => downloadPDF(pdf.url, pdf.fileName));
-    Promise.all(promises)
-        .then(() => alert('All PDFs downloaded successfully'))
-        .catch(() => alert('Download failed for one or more PDFs. Please try again.'));
-});
-
-function downloadPDF(pdfUrl, fileName) {
-    return fetch(pdfUrl)
-        .then(response => response.blob())
-        .then(blob => {
-            const link = document.createElement('a');
-            link.href = window.URL.createObjectURL(blob);
-            link.download = fileName;
-            document.body.appendChild(link);
-            link.click();
-            link.remove();
-            window.URL.revokeObjectURL(link.href);
-        });
-}
-
-
-
-
-
-
-
-
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-              e.preventDefault();
-          
-              const targetId = this.getAttribute('href').substring(1);
-              const targetElement = document.getElementById(targetId);
-          
-              if (targetElement) {
-                window.scrollTo({
-                  top: targetElement.offsetTop,
-                  behavior: 'smooth'
-                });
-              }
-            });
-          });
-          
-
-
-function scrollToCVSection() {
-    if (window.location.hash === "#cv") {
-      const cvSection = document.getElementById("cv");
-      if (cvSection) {
-        cvSection.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  }
-  
-  window.addEventListener("load", scrollToCVSection);
-  
-
-        function showCV() {
-            document.getElementById('cv-container').style.display = 'block';
-            document.getElementById('cover-letter-container').style.display = 'none';
-            document.getElementById('about-me-container').style.display = 'none';
-        }
-
-        function showCoverLetter() {
-            document.getElementById('cv-container').style.display = 'none';
-            document.getElementById('cover-letter-container').style.display = 'block';
-            document.getElementById('about-me-container').style.display = 'none';
-        }
-
-        function showAboutMe() {
-            document.getElementById('cv-container').style.display = 'none';
-            document.getElementById('cover-letter-container').style.display = 'none';
-            document.getElementById('about-me-container').style.display = 'block';
-        }
     </script>
 
 

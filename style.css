@@ -120,4 +120,7 @@ ul, li {
   element::before, element::after {
     content: "";
   }
-    
+  .content-heading {
+    font-size: 36px;
+    margin-bottom: 10px;
+}

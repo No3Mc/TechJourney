@@ -12,3 +12,40 @@ footer {
     background-color: #000;
     color: #fff;
 }
+.content-heading {
+    color: #ffffff;
+}
+
+
+
+
+.toolbox-container {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.skill-category {
+    background: linear-gradient(135deg, #21212a 0%, #1a1a20 100%);
+    color: #ecf0f1;
+}
+
+.skill-category:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-color: #3498db;
+}
+
+.skill-category h2 {
+    color: #6a777b;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.skill-category h3 {
+    color: #f39c12;
+}
+
+.skill-category p {
+    color: rgba(236, 240, 241, 0.9);
+}
+
+.stacked-categories {
+    gap: 20px;
+}
