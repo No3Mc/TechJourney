@@ -8,7 +8,10 @@ header {
     background-color: #333;
     color: #fff;
 }
-
+#sun-icon {
+    color: #ffdb58; 
+    font-size: 24px; 
+}
 footer {
     background-color: #333;
     color: #ffffff;
@@ -36,7 +39,10 @@ nav ul li a {
 #theme-toggle {
     color: #ecf0f1;
 }
+#cv-icon a:hover {
+    color: #3498db;
 
+}
 #theme-toggle:hover {
     color: #3498db;
 }

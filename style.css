@@ -8,16 +8,6 @@ body, h1, ul, li {
 body {
     font-family: Arial, sans-serif;
 }
-#sun-icon {
-    color: #ffdb58; 
-    font-size: 24px; 
-}
-
-#moon-icon {
-    color: #6c757d; 
-    font-size: 24px; 
-}
-
 
 /* Style for the navigation */
 nav ul {
@@ -78,7 +68,6 @@ nav ul li a {
     text-align: center;
 }
 
-
 /* Font Awesome import here */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
 
@@ -98,10 +87,10 @@ ul, li {
     list-style-type: none;
     margin: 0;
     padding: 0;
-  }
-  element::before, element::after {
+}
+element::before, element::after {
     content: "";
-  }
+}
   .content-heading {
     font-size: 36px;
     margin-bottom: 10px;
@@ -119,5 +108,37 @@ ul, li {
 }
 
 #cv-icon i {
+    margin-right: 5px;
+}
+
+#map-icon {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+#map-icon a {
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 16px; 
+}
+
+#map-icon i {
+    margin-right: 5px;
+}
+
+#projects-icon {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+#projects-icon a {
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 16px; 
+}
+
+#projects-icon i {
     margin-right: 5px;
 }
