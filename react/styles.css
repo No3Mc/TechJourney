@@ -1,50 +1,46 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
 .container {
-    text-align: center;
-    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
-.person {
-    width: 100px;
-    height: 100px;
-    background-color: lightblue;
-    border-radius: 50%;
-    margin: 0 auto;
-    position: relative;
-    transition: background-color 0.5s ease-in-out;
-}
-
-.person::after {
-    content: '';
+.glasses {
     width: 50px;
-    height: 50px;
-    background-color: white;
-    border-radius: 50%;
-    position: absolute;
-    top: 25px;
-    left: 25px;
-    transition: background-color 0.5s ease-in-out;
-}
-
-.with-glasses::before {
-    content: '';
-    width: 60px;
     height: 20px;
     background-color: black;
+    border-radius: 10px;
     position: absolute;
-    top: 45px;
-    left: 20px;
-    transform: rotate(-45deg);
-    transition: transform 0.5s ease-in-out;
-    animation: slideIn 0.5s ease-in-out forwards;
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+    animation: expand 10s forwards; 
+    z-index: 9999; 
+    opacity: 0; 
+    filter: blur(10px) grayscale(100%);
 }
 
-@keyframes slideIn {
+@keyframes expand {
     0% {
-        transform: translateX(-50px) rotate(-45deg);
-        opacity: 0;
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0; 
+        filter: blur(10px) grayscale(100%);
     }
     100% {
-        transform: rotate(-45deg);
-        opacity: 1;
+        transform: translate(-50%, -50%) scale(100);
+        filter: blur(0) grayscale(0%); 
+    }
+    90% {
+        opacity: 1; 
+        filter: blur(0) grayscale(0%);
+    }
+    100% {
+        opacity: 0; 
+        filter: blur(0) grayscale(100%);
     }
 }
