@@ -1,6 +1,5 @@
 /* Footer Styles */
 .footer {
-
   text-align: center;
   padding: 2px 0; 
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -30,7 +29,6 @@
 .social a {
   text-decoration: none;
   font-size: 1rem; 
-  color: #fff;
   transition: color 0.3s, transform 0.3s;
 }
 

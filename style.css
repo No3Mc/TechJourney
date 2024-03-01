@@ -6,9 +6,18 @@ body, h1, ul, li {
 
 /* Set background color and font for the body */
 body {
-    background-color: #e6f7ff;
     font-family: Arial, sans-serif;
 }
+#sun-icon {
+    color: #ffdb58; 
+    font-size: 24px; 
+}
+
+#moon-icon {
+    color: #6c757d; 
+    font-size: 24px; 
+}
+
 
 /* Style for the navigation */
 nav ul {
@@ -24,14 +33,9 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ecf0f1;
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #3498db;
 }
 
 /* Style for the content heading */
@@ -39,28 +43,20 @@ nav ul li a:hover {
     text-align: center;
     margin-top: 20px;
     font-size: 24px;
-    color: #2c3e50;
 }
 
 #theme-toggle {
     background: none;
     border: none;
     font-size: 24px;
-    color: #ecf0f1;
     cursor: pointer;
     margin-right: 20px;
     transition: color 0.3s;
     animation: fadeIn 1.5s forwards;
 }
 
-#theme-toggle:hover {
-    color: #3498db;
-}
-
 /* Style for the tab1-box */
 .tab1-box {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
     border-radius: 5px; 
     padding: 20px; 
     margin: 20px auto;
@@ -77,22 +73,9 @@ nav ul li a:hover {
 .tab1-description {
     font-size: 16px;
     line-height: 1.6;
-    color: #333; 
     font-family: 'Roboto', sans-serif;
     padding: 0 20px;
     text-align: center;
-}
-
-
-
-body.night-mode .tab1-box {
-    background-color: #333;
-    border: 1px solid #444;
-    color: #eee; 
-}
-
-body.night-mode .tab1-description {
-    color: #eee;
 }
 
 
@@ -105,7 +88,6 @@ body.night-mode .tab1-description {
 .portfolio-text {
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
-    color: #fff;
     font-size: 24px;
     margin-right: 10px;
     text-decoration: none;
@@ -123,4 +105,19 @@ ul, li {
   .content-heading {
     font-size: 36px;
     margin-bottom: 10px;
+}
+#cv-icon {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+#cv-icon a {
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 16px; 
+}
+
+#cv-icon i {
+    margin-right: 5px;
 }

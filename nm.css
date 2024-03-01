@@ -1,23 +1,62 @@
 /* Styles for night mode */
 body {
     background-color: #222;
-    color: #fff;
+    color: #acacac;
 }
 
 header {
     background-color: #000;
-    color: #fff;
+    color: #acacac;
 }
 footer {
     background-color: #000;
-    color: #fff;
+    color: #acacac;
 }
 .content-heading {
-    color: #ffffff;
+    color: #acacac;
 }
 
+nav ul li a:hover {
+    color: #3498db;
+}
+nav ul li a {
+    color: #acacac;
+}
 
+#theme-toggle {
+    color: #acacac;
+}
 
+#theme-toggle:hover {
+    color: #3498db;
+}
+.tab1-box {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+}
+.tab1-description {
+    color: #acacac;
+}
+body.night-mode .tab1-box {
+    background-color: #333;
+    border: 1px solid #444;
+    color: #eee; 
+}
+body.night-mode .tab1-description {
+    color: #eee;
+}
+.portfolio-text {
+    color: #acacac;
+}
+.social a {
+    color: #acacac;
+}
+.social-icons a {
+    color: #acacac; 
+}
+.content-heading {
+    color: #acacac;
+}
 
 .toolbox-container {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -25,7 +64,7 @@ footer {
 
 .skill-category {
     background: linear-gradient(135deg, #21212a 0%, #1a1a20 100%);
-    color: #ecf0f1;
+    color: #acacac;
 }
 
 .skill-category:hover {
@@ -43,9 +82,14 @@ footer {
 }
 
 .skill-category p {
-    color: rgba(236, 240, 241, 0.9);
+    color: #acacac;
 }
 
 .stacked-categories {
     gap: 20px;
 }
+
+#cv-icon a {
+    color: #acacac;
+}
+
