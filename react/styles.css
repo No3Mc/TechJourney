@@ -1,46 +1,29 @@
-body, html {
-    height: 100%;
-    margin: 0;
-}
-
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
-
-.glasses {
-    width: 50px;
-    height: 20px;
-    background-color: black;
-    border-radius: 10px;
+.glasses-container {
     position: absolute;
-    top: 50%;
+    top: 30%; 
     left: 50%;
-    transform-origin: center;
-    animation: expand 10s forwards; 
-    z-index: 9999; 
-    opacity: 0; 
-    filter: blur(10px) grayscale(100%);
+    transform: translateX(-50%);
+    width: 650px;
+    height: 250px;
+    border-radius: 10px;
+    background-color: rgba(63, 63, 63, 0.5);
+    overflow: hidden; 
 }
 
-@keyframes expand {
-    0% {
-        transform: translate(-50%, -50%) scale(0);
-        opacity: 0; 
-        filter: blur(10px) grayscale(100%);
-    }
-    100% {
-        transform: translate(-50%, -50%) scale(100);
-        filter: blur(0) grayscale(0%); 
-    }
-    90% {
-        opacity: 1; 
-        filter: blur(0) grayscale(0%);
-    }
-    100% {
-        opacity: 0; 
-        filter: blur(0) grayscale(100%);
-    }
+.lens {
+    position: absolute;
+    width: 250px; 
+    height: 250px; 
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(93, 93, 93, 0.5) 30%, transparent 50%);
+}
+
+.lens.left {
+    left: 10px; 
+    clip-path: circle(50% at 50% 50%);
+}
+
+.lens.right {
+    right: 10px; 
+    clip-path: circle(50% at 50% 50%);
 }
