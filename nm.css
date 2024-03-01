@@ -42,10 +42,36 @@ body.night-mode .tab1-box {
     border: 1px solid #444;
     color: #eee; 
 }
+#sun-icon {
+    color: #ffdb58; 
+    font-size: 24px; 
+}
 #moon-icon {
     color: #6c757d; 
     font-size: 24px; 
 }
+@keyframes iconAnimation {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+#sun-icon, #moon-icon {
+    font-size: 24px;
+    animation: iconAnimation 0.5s ease-in-out;
+}
+
+
+#sun-icon:hover, #moon-icon:hover {
+    transform: scale(1.1);
+}
+
 body.night-mode .tab1-description {
     color: #eee;
 }
