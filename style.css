@@ -67,6 +67,32 @@ nav ul li a {
     padding: 0 20px;
     text-align: center;
 }
+@keyframes iconAnimation {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+#sun-icon, #moon-icon {
+    font-size: 24px;
+    animation: iconAnimation 0.5s ease-in-out;
+}
+
+#sun-icon:hover, #moon-icon:hover {
+    transform: scale(1.1);
+}
+#sun-icon {
+    font-size: 24px; 
+}
+#moon-icon {
+    font-size: 24px; 
+}
+
 
 /* Font Awesome import here */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
