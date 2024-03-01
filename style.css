@@ -92,6 +92,14 @@ nav ul li a {
 #moon-icon {
     font-size: 24px; 
 }
+.portfolio-text {
+    transition: opacity 0.3s ease-in-out;
+}
+.portfolio-text:hover {
+    opacity: 0.8;
+}
+
+
 
 
 /* Font Awesome import here */
